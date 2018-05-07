@@ -1,0 +1,98 @@
+.gutter{
+   margin: 10px 5px 0px 5px;
+   padding: 0px 20px 0px 20px;
+}
+
+.grid{
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+}
+
+
+.grid > div > div{
+    height: 100%;
+    background-color: lightblue;
+}
+
+
+.cell{
+    
+    background-color: white;
+    flex:1 1 0%;
+    //flex-basis: 10%;
+    //display: flex;
+    //flex-direction: column;
+    //margin-bottom: 5px;
+    //margin-right: 5px;
+    padding: 5px;
+    
+}
+
+
+.innerCell{
+    padding:px;
+}
+
+
+/* the DIV nested within a DIV inside a CELL */
+.cell > div >div{
+    //background-color: lightblue;
+    //padding: 10px;
+    //margin-top: -7px;
+        
+}
+
+
+/* Product Image Setting */
+//.productImage{
+    background-color: red;
+    height: 100%;
+    width:  100%;
+}
+
+
+/* the DIV nested within a DIV inside a CELL */
+.productTitle h4{
+    //background-color: lightgreen;
+    padding: 10px 0px 0px 10px;
+    color: deepskyblue;
+}
+
+
+.productDescription{
+    padding:5px 10px;
+    //color: red;
+}
+
+/* nested flex properties for button and price */
+.action{
+    //background-color: lightblue;
+    //border: solid white 2px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    //align-content: space-around;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+
+/* Setting properties for price */
+.action .price{
+    color: blue;
+    align-self: baseline;
+    
+    
+}
+
+
+.imageHolder{
+    
+    background-color: grey;
+    width: 400vw;
+    height: 300vh;
+}
