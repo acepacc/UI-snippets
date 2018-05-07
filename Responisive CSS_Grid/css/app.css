@@ -1,0 +1,221 @@
+html{margin:0;
+padding:0;
+}
+
+
+
+body{
+  background:orange;
+}
+
+/******GRID SETTING*****/
+#grid{
+  display:grid;
+  //grid-template-row: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  background:white;
+  grid-gap:10px;
+}
+
+
+/******HEADER SETTING*****/
+#header{
+  //background:orange;
+  display:grid;
+  grid-template-rows: 10em 4em;
+  grid-area:header;
+  height: auto;
+    
+   //grid-column-gap:1px;
+
+}
+
+
+/******HERO SETTING*****/
+#hero{
+  
+  display:grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "heroImg heroText";
+  background:pink;
+  height:auto;
+}
+
+/*Main menu Navigation*/
+#mainNav{
+  background:brown;
+  //height:20vh;
+}
+
+
+/*Hero Image*/
+.heroImg{
+  
+  grid-area:heroImg;
+  background: red;
+}
+
+
+/*Hero Text*/
+.heroText{
+  grid-area:heroText;
+  background:purple;
+}
+
+.heroImg, .heroText{
+  display:grid;
+  justify-items:center;
+  align-items:center;
+
+}
+
+/******HERO SETTING*****/
+#content{
+  background:white;
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-areas:
+    "about"
+    "skills"
+    "portfolio"
+    "contact";
+  grid-gap:3px;
+}
+
+.about{
+  display:grid;
+  grid-template-areas:
+    "title title"
+    "content content"
+    ;
+  grid-area:about;
+  background:lightblue;
+  
+}
+
+.skills{
+  grid-area:skills;
+  background:red;
+  
+}
+
+.portfolio{
+  grid-area:portfolio;
+  background:lightgreen;
+  display:grid;
+  grid-template-columns:1fr  ;
+  grid-template-areas:
+    "title title"
+    "div div"
+    "div div"
+    ;
+  
+  
+    
+}
+
+.portfolio>.title{
+  background:yellow;
+  //display:grid;
+  
+  //grid-template-columns: 1fr;
+}
+
+
+#gallery{
+  display:grid;
+  grid-gap:5px;
+  //grid-template-columns: 1fr;
+  grid-template-columns: repeat(2,1fr);
+  padding:6px;
+  height: 300px;
+  justify-items:space-around;
+}
+
+#gallery div{
+  background-color:grey;
+  display:grid;
+  justify-items:center;
+  align-items:center;
+}
+
+
+.contact{
+  grid-area:contact;
+  background:brown;
+  
+}
+
+
+footer{
+  background:green;
+  display:grid;
+  grid-area:footer;
+  justify-items:center;
+  align-items:center;
+}
+
+
+/* aligning all items to center */
+#mainNav, #content, footer{
+ display:grid;
+ text-align:center;
+  
+}
+
+/*Section Titles*/
+.title{
+  font-size:1.9em;
+  grid-area:title;
+}
+
+
+/*Section Content*/
+.content{
+  grid-area:content;
+  //background:white;
+  width: 98%;
+  
+}
+
+
+/****MOBILE SETTING ****/
+@media only screen and (max-width: 50em) { 
+
+#hero{
+  
+  display:inline-grid;
+  grid-template-columns:1fr;
+  grid-template-areas:
+    "heroImg"
+    "heroText";
+  background:pink;
+  //height:20vh;
+  }
+  
+  #gallery{
+  display:grid;
+  grid-gap:5px;
+  grid-template-columns: 1fr;
+  //grid-template-rows:1fr;
+  padding:6px;
+  height: 50em;
+  justify-items:space-around;
+}
+  
+  #gallery div{
+  background-color:pink;
+  display:grid;
+  justify-items:center;
+  align-items:center;
+}
+  
+  
+  
+  } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+  /*** MEDIA QUERY ENDS HERE ****/
+
